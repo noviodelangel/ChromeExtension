@@ -1,0 +1,19 @@
+{
+  "name": "Task manager",
+  "version": "1.0",
+  "description": "Allows quickly adding tasks to learning app",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "webNavigation"
+  ],
+  "background": {
+    "scripts": [
+      "runtime.js",
+      "background.js"
+    ]
+  },
+  "page_action": {
+    "default_popup": "index.html"
+  }
+}
