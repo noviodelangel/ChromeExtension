@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ChromeExtension';
+  public selectedText = '';
+
+  intercept(): void {
+    chrome.tabs.executeScript( { code: 'window.getSelection().toString();' }, selectedText => this.selectedText = selectedText[0]);
+  }
 }
